@@ -1,34 +1,26 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "site",
+  "private": true,
   "scripts": {
-    "start": "npm start"
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kalecream/website.git"
+  "dependencies": {
+    "date-fns": "^2.28.0",
+    "gray-matter": "^4.0.2",
+    "latest": "^0.2.0",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remark": "^14.0.1",
+    "remark-html": "^15.0.0",
+    "storyboard": "^3.3.2",
+    "storybook": "^6.4.19"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kalecream/website/issues"
-  },
-  "homepage": "https://github.com/kalecream/website#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@storybook/addon-actions": "^6.4.19",
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/addon-interactions": "^6.4.19",
-    "@storybook/addon-links": "^6.4.19",
-    "@storybook/react": "^6.4.19",
-    "@storybook/testing-library": "0.0.9",
-    "babel-loader": "^8.2.4"
-  },
-  "dependencies": {}
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.0.10"
+  }
 }
