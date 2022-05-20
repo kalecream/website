@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import styles from '../styles/about.module.css'
 
+import GlobalLayout from '../components/globalLayout'
+
 export default function About( children, home ) {
   return (
+    <GlobalLayout>
     <div className={styles.container}>
 
       <div className={styles.about__image}>
@@ -48,5 +51,6 @@ export default function About( children, home ) {
       </div>
 
     </div>
+    </GlobalLayout>
   )
 }
