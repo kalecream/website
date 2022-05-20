@@ -11,12 +11,8 @@ const name = 'Sabrina Medwinter'
 export const siteTitle = 'Sab Medwinter'
 const pageTitle = "Placeholder"
 
-type Props = {
-  children: ReactNode;
-  title?:string;
-}
 
-export default function Layout({ children}:  React.PropsWithChildren<{}>, Home: NextPage ) {
+export default function Layout({ children}, home ) {
   return (
     <div className={styles.container}>
       <Head>

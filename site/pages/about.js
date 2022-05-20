@@ -5,7 +5,7 @@ import styles from '../styles/about.module.css'
 
 import GlobalLayout from '../components/global/globalLayout'
 
-export default function About( {children}:React.PropsWithChildren<{}>, home: NextPage ) {
+export default function About( children, home ) {
   return (
     <GlobalLayout>
     <div className={styles.container}>
