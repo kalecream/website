@@ -1,0 +1,44 @@
+.hero {
+    width: 100%;
+    margin-top: 15%;
+}
+
+.hero p {
+    text-align: center;
+}
+
+@keyframes animate-socials {
+    0% {
+      transform: rotate( 0, 0);
+    }
+    100% {
+      transform: rotate( 50, 0);
+    }
+  }
+.socialLinks {
+    display: flex;
+}
+.socialLinks > * {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialLinks > * > a {
+    transform: rotate(10deg);
+    font-weight: 700;
+    opacity: 30%;
+  }
+
+.socialLinks > * > a:hover { 
+    opacity: 95%;
+    animation-name: animate-socials;
+    animation-duration: 2s;
+  }
+
+  .button {
+    width: 100%;
+    stroke: 0px !important;
+  }

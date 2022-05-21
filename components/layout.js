@@ -4,7 +4,6 @@ import styles from '../styles/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Navbar from './global/navbar'
-import SecondNavbar from './global/second-nav'
 
 const name = 'KaleCream'
 export const siteTitle = 'KaleCream'
@@ -29,33 +28,13 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <Navbar></Navbar>
-        <SecondNavbar></SecondNavbar>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/home/avatar_sab.svg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
+            {/* placeholder */}
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-
+            {/* placeholder */}
           </>
         )}
       </header>

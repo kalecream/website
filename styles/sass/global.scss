@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/public/fonts/ProximaNova.otf) format(opentype);
+}
+
+$background: #004643;
+$paragraph: #abd1c6;
+$button-text: #001e1d;
+$headline: #fffffe;
+$button: #f9bc60;
+
+    // illustration
+$stroke: #001e1d;
+$main: #e8e4e6;
+$highlight: #f9bc60;
+$secondary: #abd1c6;
+$tertiary:#e16162;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  color: $paragraph;
+  background-color: $background;
+  line-height: 1.8;
+  font-size: 1.1rem;
+
+  section {
+    margin: 10% 0;
+    justify-content: center;
+
+    &::nth-child(odd) {
+      background-color: $background;
+    }
+    
+    &::nth-child(even) {
+      background-color: $secondary;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  color: $headline;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+p {
+  color: $paragraph;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+a {
+  color: $button;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($button, 20%);
+  }
+      
+}
+
+button {
+  padding: 5%;
+  display: flex;
+  justify-content:center;
+  border-radius: 5px;
+  background-color: $button;
+  color: $button-text;
+  font-weight: 700;
+  font-size: 0.9rem;
+  stroke: 3px solid $stroke;
+
+  &:hover {
+    background-color: $button;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+@media screen and (max-width: 479px){
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .sideNav {
+    * {
+      flex-flow: row wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 991px){
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+// Navigation
+
+nav {
+  width: 100%;
+  height: 3%;
+  display: flex;
+
+  #site-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  & > div {
+    display: flex;
+    margin: auto;
+
+    & > * {
+      font-weight: 600;
+      margin-left: 0.7rem;
+      margin-right: 0.7rem;
+      font-size: 1rem;
+    }
+  }
+  
+  a { color: $headline; }
+}
+
+.nav {
+  
+  background-color: blanchedalmond;
+}
+
+  .navName {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #010101;
+  }
+
+    // Vertical Nav container
+  .sideNav {
+    width: 5%;
+    height: 55%;
+    padding-bottom: 5%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+
+    * {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+  }
+
+  .sideNav > * > a {
+    font-size: 1rem;
+    transform: rotate(10deg);
+    font-weight: 700;
+    opacity: 30%;
+
+    & > svg {
+      filter: invert(100%);
+    } 
+  }
+
+  .sideNav > * > a:hover { 
+    opacity: 95%;
+  }
