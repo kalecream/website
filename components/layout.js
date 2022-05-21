@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from './layout.module.css'
+import styles from '../styles/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Navbar from './global/navbar'
+import SecondNavbar from './global/second-nav'
 
-const name = 'Sab Medwinter'
-export const siteTitle = 'Sab Medwinter'
+const name = 'KaleCream'
+export const siteTitle = 'KaleCream'
 
 export default function Layout({ children, home }) {
   return (
@@ -26,17 +28,18 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
+        <Navbar></Navbar>
+        <SecondNavbar></SecondNavbar>
         {home ? (
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/home/avatar_sab.svg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
@@ -52,11 +55,7 @@ export default function Layout({ children, home }) {
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
+
           </>
         )}
       </header>

@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Navbar from '../components/global/navbar'
 import styles from '../styles/about.module.css'
 
 export default function About( children, home ) {
   return (
     <div className={styles.container}>
+      <Navbar></Navbar>
 
       <div className={styles.about__image}>
         <Image 

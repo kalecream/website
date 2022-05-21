@@ -1,17 +1,19 @@
 
 .nav {
+  position: fixed;
   width: 100%;
-  height: 5%;
-  background-color: blanchedalmond;
+  height: 10%;
+  top: 0;
+  background-color: rgb(1, 133, 122);
 }
 
   .navName {
     position: fixed;
     top: 2%;
-    left: 2%;
-    font-size: 2.5rem;
+    left: 3%;
+    font-size: 2rem;
     font-weight: 900;
-    color: #010101;
+    color: #ccfcf0;
   }
 
   .NavContainer {
@@ -19,19 +21,29 @@
     position: fixed;
     top: 3.5%;
     right: 0%;
-    padding: 0 5%;
+    padding: 0 10%;
   }
 
   .NavContainer > * {
-    padding: 0 1rem;
-    color: grey;
+    padding: 0 2rem;
+    color: hsl(170, 75%, 89%);
     font-weight: 600;
     font-size: 0.8rem;
   }
 
+  /* // Vertical Navigation */
+
+@keyframes animate-socials {
+  from {
+    transform: translate( 0, 0);
+  }
+  to {
+    transform: translate( 50, 0);
+  }
+}
   .sideNav {
-    width: 5%;
-    height: 55%;
+    width: 8%;
+    height: 40%;
     padding-bottom: 5%;
     position: fixed;
     bottom: 0;
@@ -48,11 +60,13 @@
 
   .sideNav > * > a {
     font-size: 1rem;
-    transform: rotate(270deg);
+    transform: rotate(10deg);
     font-weight: 700;
     opacity: 30%;
   }
 
   .sideNav > * > a:hover { 
     opacity: 95%;
+    animation-name: animate-socials;
+    animation-duration: 2s;
   }
