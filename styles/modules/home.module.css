@@ -1,6 +1,7 @@
 .hero, .blogSection {
     width: 100%;
     margin: 3rem 0;
+    height: 100vh;
 }
 
 .heroLeft, .heroRight {
@@ -15,16 +16,11 @@
     display: flex;
   }
 
-.heroLeft img {
-    width: 80%;
-    height: 500px;
-  }
-
-  .heroRight {
+.heroRight {
       display: grid;
   }
 
-  .heroHighlight {
+.heroHighlight {
     font-family: "HighSpirit";
     font-size: 7rem;
     margin-top: 0.5rem;
@@ -69,9 +65,50 @@
     width: 100%;
   }
 
+  @media (max-width: 768px) {
+
+    .heroLeft {
+        display: none;
+    }
+
+    .hero {
+        height: 50vh;
+        margin-bottom: 20rem;
+    }
+
+    .heroLeft, .heroRight {
+        width: 100%;
+    }
+
+    .heroHighlight {
+        font-size:9vmax;
+    }
+
+    
+  }
+
+  
+  @media (max-width: 1200px) {
+    .heroLeft {
+        width: 40%;
+    }
+
+    .heroRight {
+        width: 60%;
+    }
+
+    .heroHighlight {
+    }
+  }
+
   /*  BLOG */
 
   .blogSection {
     margin: auto 15rem;
-    max-width: 30rem;
+  }
+
+  @media (max-width: 768px) {
+    .blogSection {
+        margin: 0;
+    }
   }
