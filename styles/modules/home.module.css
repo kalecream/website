@@ -1,20 +1,51 @@
-.hero {
+.hero, .blogSection {
     width: 100%;
-    margin-top: 15%;
+    margin: 3rem 0;
 }
 
-.hero p {
-    text-align: center;
+.heroLeft, .heroRight {
+    float: left;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+    height: auto;
 }
 
-@keyframes animate-socials {
-    0% {
-      transform: rotate( 0, 0);
-    }
-    100% {
-      transform: rotate( 50, 0);
-    }
+.heroLeft {
+    display: flex;
   }
+
+.heroLeft img {
+    width: 80%;
+    height: 500px;
+  }
+
+  .heroRight {
+      display: grid;
+  }
+
+  .heroHighlight {
+    font-family: "HighSpirit";
+    font-size: 7rem;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
+  .heroRight .heroTinyText {
+      margin-top: -3rem;
+    text-align: center;
+    font-size: 0.8 rem;
+    text-transform: uppercase;
+  }
+
+  .heroRight h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
 .socialLinks {
     display: flex;
 }
@@ -24,21 +55,23 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-}
-
-.socialLinks > * > a {
-    transform: rotate(10deg);
+    transform: rotate(15deg);
     font-weight: 700;
     opacity: 30%;
-  }
+}
 
-.socialLinks > * > a:hover { 
+.socialLinks > a:hover { 
     opacity: 95%;
-    animation-name: animate-socials;
-    animation-duration: 2s;
+    transform: rotate(-10deg);
   }
 
   .button {
     width: 100%;
-    stroke: 0px !important;
+  }
+
+  /*  BLOG */
+
+  .blogSection {
+    margin: auto 15rem;
+    max-width: 30rem;
   }

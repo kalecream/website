@@ -1,27 +1,40 @@
 @font-face {
   font-family: 'Proxima Nova';
-  src: url(/public/fonts/ProximaNova.otf) format(opentype);
+  font-style: normal;
+  font-weight: normal;
+  src: local("Proxima Nova"), url(/fonts/ProximaNova.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Boldace';
+  src: local("Boldace"), url(/fonts/BoldaceBrush.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'HighSpirit';
+  src: local("HighSpirit"), url(/fonts/HighSpirited.ttf) format("truetype");
 }
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 3rem;
   font-family: 'Proxima Nova', sans-serif;
-  color: #abd1c6;
-  background-color: #004643;
+  color: #636b46;
+  background-color: #e9e7da;
   line-height: 1.8;
   font-size: 1.1rem;
 }
 
 body section {
-  margin: 10% 0;
+  height: 50vh;
+  margin: 3rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 body section::nth-child(odd) {
-  background-color: #004643;
+  background-color: #e9e7da;
 }
 
 body section::nth-child(even) {
@@ -34,7 +47,7 @@ body section::nth-child(even) {
 }
 
 h1, h2, h3 {
-  color: #fffffe;
+  color: #373f27;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -47,44 +60,47 @@ h1 {
 }
 
 p {
-  color: #abd1c6;
+  color: #636b46;
   margin-bottom: 10px;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 a {
-  color: #f9bc60;
+  color: #636b46;
   font-weight: 500;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ea9009;
+  color: #28448e;
 }
 
 button {
-  padding: 5%;
+  margin: 18px 10px;
+  padding: 18px 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
-  background-color: #f9bc60;
+  border-radius: 50px;
+  background-color: #e9e7da;
+  border: 3px solid #4f71cd;
   color: #001e1d;
-  font-weight: 700;
   font-size: 0.9rem;
-  stroke: 3px solid #001e1d;
 }
 
 button:hover {
-  background-color: #f9bc60;
+  background-color: #4f71cd;
+  color: #e9e7da;
+  letter-spacing: 3px;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+  margin: auto;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 479px) {
@@ -100,6 +116,25 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .heroLeft, .container .heroRight {
+    width: 100%;
+  }
   h1 {
     font-size: 2.7rem;
   }
@@ -120,78 +155,22 @@ nav {
 }
 
 nav #site-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  margin: auto 3rem;
 }
 
 nav > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
+  margin: auto 3rem;
+  width: 100%;
 }
 
 nav > div > * {
-  font-weight: 600;
+  float: right;
+  font-weight: 300;
   margin-left: 0.7rem;
   margin-right: 0.7rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 nav a {
-  color: #fffffe;
-}
-
-.nav {
-  background-color: blanchedalmond;
-}
-
-.navName {
-  position: fixed;
-  top: 2%;
-  left: 2%;
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #010101;
-}
-
-.sideNav {
-  width: 5%;
-  height: 55%;
-  padding-bottom: 5%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.sideNav * {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sideNav > * > a {
-  font-size: 1rem;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  font-weight: 700;
-  opacity: 30%;
-}
-
-.sideNav > * > a > svg {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-.sideNav > * > a:hover {
-  opacity: 95%;
+  color: #373f27;
 }

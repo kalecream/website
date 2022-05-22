@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/layout.module.css'
+import styles from '../styles/modules/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Navbar from './global/navbar'
@@ -28,24 +28,10 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <Navbar></Navbar>
-        {home ? (
-          <>
-            {/* placeholder */}
-          </>
-        ) : (
-          <>
-            {/* placeholder */}
-          </>
-        )}
       </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <main>
+        {children}
+      </main>
     </div>
   )
 }

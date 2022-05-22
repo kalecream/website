@@ -1,24 +1,41 @@
+//  Fonts
+
 @font-face {
   font-family: 'Proxima Nova';
-  src: url(/public/fonts/ProximaNova.otf) format(opentype);
+  font-style: normal;
+  font-weight: normal;
+  src: local('Proxima Nova'), url(/fonts/ProximaNova.otf) format('opentype');
 }
 
-$background: #004643;
-$paragraph: #abd1c6;
+@font-face {
+  font-family: 'Boldace';
+  src: local('Boldace'), url(/fonts/BoldaceBrush.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'HighSpirit';
+  src: local('HighSpirit'), url(/fonts/HighSpirited.ttf) format('truetype');
+}
+
+// Colours
+$background: #e9e7da;
+$paragraph: #636b46;
 $button-text: #001e1d;
-$headline: #fffffe;
-$button: #f9bc60;
+$headline: #373f27;
+$button: #4f71cd;
 
     // illustration
-$stroke: #001e1d;
-$main: #e8e4e6;
-$highlight: #f9bc60;
+$stroke: $headline;
+$main: $background;
+$highlight: $button;
 $secondary: #abd1c6;
 $tertiary:#e16162;
 
+// Body
+
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 3rem;
   font-family: 'Proxima Nova', sans-serif;
   color: $paragraph;
   background-color: $background;
@@ -26,7 +43,8 @@ body {
   font-size: 1.1rem;
 
   section {
-    margin: 10% 0;
+    height: 50vh;
+    margin: 3rem;
     justify-content: center;
 
     &::nth-child(odd) {
@@ -59,11 +77,12 @@ h1 {
 p {
   color: $paragraph;
   margin-bottom: 10px;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 a {
-  color: $button;
+  color: $paragraph;
   font-weight: 500;
   text-decoration: none;
 
@@ -74,24 +93,26 @@ a {
 }
 
 button {
-  padding: 5%;
+  margin: 18px 10px;
+  padding: 18px 32px;
   display: flex;
   justify-content:center;
-  border-radius: 5px;
-  background-color: $button;
+  border-radius: 50px;
+  background-color: $background;
+  border: 3px solid $button;
   color: $button-text;
-  font-weight: 700;
   font-size: 0.9rem;
-  stroke: 3px solid $stroke;
 
   &:hover {
     background-color: $button;
+    color: $background;
+    letter-spacing: 3px;
   }
 }
 
 img {
-  max-width: 100%;
-  display: block;
+  margin: auto;
+  border-radius: 15px;
 }
 
 
@@ -109,6 +130,20 @@ img {
 }
 
 @media screen and (max-width: 767px){
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+    .hero {
+      flex-direction: column;
+    }
+
+    .heroLeft, .heroRight {
+      width: 100%;
+    }
+  }
+
   h1 {
     font-size: 2.7rem;
   }
@@ -128,67 +163,23 @@ nav {
   display: flex;
 
   #site-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    margin: auto 3rem;
   }
 
   & > div {
-    display: flex;
-    margin: auto;
+    margin: auto 3rem;
+    width: 100%;
 
     & > * {
-      font-weight: 600;
+      float: right;
+      font-weight: 300;
       margin-left: 0.7rem;
       margin-right: 0.7rem;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
   
   a { color: $headline; }
 }
 
-.nav {
-  
-  background-color: blanchedalmond;
-}
-
-  .navName {
-    position: fixed;
-    top: 2%;
-    left: 2%;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #010101;
-  }
-
-    // Vertical Nav container
-  .sideNav {
-    width: 5%;
-    height: 55%;
-    padding-bottom: 5%;
-    position: fixed;
-    bottom: 0;
-    left:0;
-
-    * {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-  }
-
-  .sideNav > * > a {
-    font-size: 1rem;
-    transform: rotate(10deg);
-    font-weight: 700;
-    opacity: 30%;
-
-    & > svg {
-      filter: invert(100%);
-    } 
-  }
-
-  .sideNav > * > a:hover { 
-    opacity: 95%;
-  }
+// Util Styles
