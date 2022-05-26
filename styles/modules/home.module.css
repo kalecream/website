@@ -65,7 +65,7 @@
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
 
     .heroLeft {
         display: none;
@@ -88,16 +88,13 @@
   }
 
   
-  @media (max-width: 1200px) {
+  @media (min-width: 900px) {
     .heroLeft {
         width: 40%;
     }
 
     .heroRight {
         width: 60%;
-    }
-
-    .heroHighlight {
     }
   }
 
