@@ -9,7 +9,7 @@ export default function Navbar(children) {
       <nav>
         <Link href="/" >
             <a id="site-title">
-              <Image src="/images/logo.svg" height={100} width={20} alt={siteTitle}></Image>
+              <Image src="/images/logo.svg" height={20} width={20} alt={siteTitle}></Image>
             </a> 
         </Link>
         <input type={"checkbox"} id={"nav"} className={"hidden"}></input>

@@ -97,15 +97,3 @@
         width: 60%;
     }
   }
-
-  /*  BLOG */
-
-  .blogSection {
-    margin: auto 15rem;
-  }
-
-  @media (max-width: 768px) {
-    .blogSection {
-        margin: 0;
-    }
-  }
