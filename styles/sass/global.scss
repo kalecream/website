@@ -36,8 +36,18 @@ $nav-border: #fff;
 $nav-link: #000;
 $nav-link-hover: #000;
 
+// Hero
+$hero-headline: #fff;
+$hero-secondary-headline: #c1c1c1;
+$hero-paragraph: #fff;
+
+$blur: 3px;
+$shadow-opacity: 0.3;
+$glass-effect: rgba(#fff, .1);
+$glass-effect-shadow: rgba(#000, .5);
+
 // Regular Selectors
-* {
+*, *:before, *:after {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -46,6 +56,12 @@ $nav-link-hover: #000;
   -moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 body {
@@ -61,13 +77,13 @@ body {
     padding: 3rem;
     place-items: center;
 
-      &:nth-child(odd) {
-        background-color: $background;
-      }
+      // &:nth-child(odd) {
+      //   background-color: $background;
+      // }
     
-      &:nth-child(even) {
-        background-color: $secondary;
-      }
+      // &:nth-child(even) {
+      //   background-color: $secondary;
+      // }
   }
 }
 
@@ -209,11 +225,15 @@ header {
 
 .hero, .blogSection {
   width: 100%;
-  margin: 3rem auto;
-  height: 100vh;
+  margin: 1rem auto;
+  height: 90vh;
+  display: grid;
+  place-items: center;
 }
 
 .hero {
+  display: flex;
+
   &::before {
     content: '';
     width: 100%;
@@ -227,14 +247,54 @@ header {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+  }
+
+  & .glassBox {
+    grid-template-rows: 1fr 0.2fr 1fr 1fr;
+    position: relative;
+    border: solid 1px $glass-effect;
+    box-shadow:(0 2px 5px $glass-effect-shadow);
+    text-shadow: 0 1px 5px #000;
+    // filter: blur($blur);
+    // filter: drop-shadow(0, 0, 0, #000);
+    padding: 1rem;
+
+    .heroRight {
+      position: relative;
+      border: solid 1px $glass-effect;
+      box-shadow:(0 2px 5px $glass-effect-shadow);
+      text-shadow: 0 1px 5px #000;
+      clip-path: inset(10em);
+      filter: blur($blur);
     }
+    
+
+    & .heroHighlight {
+      font-family: "HighSpirit";
+      font-size: 7rem;
+      margin-top: 0.5rem;
+      text-transform: capitalize;
+      font-weight: 800;
+      color: $hero-headline;
+    }
+
+    & .heroTinyText {
+      text-align: center;
+      font-size: 1 rem;
+      text-transform: uppercase;
+      color: $hero-headline;
+    }
+  }
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.heroLeft, .heroRight {
+  float: left;
+  width: 50%;
+  place-items: center;
+  height: auto;
 }
+
+
 
 // Extra small devices 600px and below
 @media only screen and (max-width: 600px) {
@@ -402,11 +462,6 @@ header {
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
-
-    
-
-    
-    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

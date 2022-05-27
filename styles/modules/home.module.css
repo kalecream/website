@@ -1,24 +1,3 @@
-.hero, .blogSection {
-    width: 100%;
-    margin: 3rem 0;
-    height: 100vh;
-}
-
-.heroLeft, .heroRight {
-    float: left;
-    width: 50%;
-    justify-content: center;
-    align-content: center;
-    height: auto;
-}
-
-.heroLeft {
-    display: flex;
-  }
-
-.heroRight {
-      display: grid;
-  }
 
 .heroHighlight {
     font-family: "HighSpirit";
@@ -53,7 +32,7 @@
     align-items: center;
     transform: rotate(15deg);
     font-weight: 700;
-    opacity: 30%;
+    opacity: 55%;
 }
 
 .socialLinks > a:hover { 
@@ -85,15 +64,4 @@
     }
 
     
-  }
-
-  
-  @media (min-width: 900px) {
-    .heroLeft {
-        width: 40%;
-    }
-
-    .heroRight {
-        width: 60%;
-    }
   }

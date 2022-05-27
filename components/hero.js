@@ -12,13 +12,14 @@ import style from '../styles/modules/home.module.css'
 
 export default function HomeHero({ children, home }) {
   return (
-    <section className={style.hero}>
-        <div className={style.heroLeft}>
+    <section className={'hero'}>
+        <div className={'heroLeft'}>
             <Image alt="" src="/images/illustration/green-ball.png" width={500} height={500}></Image>
-            </div>
+        </div>
 
-            <div className={style.heroRight}>
-                <span className={style.heroHighlight}>
+        <div className={'heroRight'}>
+            <div className={'glassBox'}>
+                <span className={'heroHighlight'}>
                     Follow me
                 </span>
                 <span className={style.heroTinyText}>on my</span>
@@ -56,6 +57,7 @@ export default function HomeHero({ children, home }) {
                 {/* <button className={style.button}>
                     View the blog
                 </button> */}
+            </div>
         </div>
     </section>
   )
