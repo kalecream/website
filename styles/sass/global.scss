@@ -85,6 +85,7 @@ $nav-menu-color: #fff;
 $hero-headline: $light-shade;
 $hero-secondary-headline: $quat-lighter;
 $hero-paragraph: #fff;
+$hero-gradient: linear-gradient(to bottom, transparent 0%, rgba($dark-shade, 1) 90%);
 
 $blur: 5px;
 $shadow-opacity: 0.3;
@@ -339,7 +340,7 @@ header {
       width: 100%; height: 100%;
       position: absolute;
       top: 0; left: 0;
-      background: linear-gradient(to bottom, transparent, rgba(#000, 1));
+      background: $hero-gradient;
       background-size: cover;
       z-index: -1;
       display: flex;

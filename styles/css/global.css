@@ -270,8 +270,8 @@ header nav ul li a:hover::before, header nav ul li a:hover::after {
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
-  background: linear-gradient(to bottom, transparent, black);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, #232e23));
+  background: linear-gradient(to bottom, transparent 0%, #232e23 90%);
   background-size: cover;
   z-index: -1;
   display: -webkit-box;
