@@ -74,7 +74,7 @@ $nav-link: #fff;
 $nav-link-background: $shadow-lighter;
 $nav-link-background-hover: $shadow;
 $nav-link-hover-color: lightgreen;
-$nav-link-hover-underline-color: transparent;
+$nav-link-hover-underline-color: $quat-lighter;
 $nav-font-weight: 900;
 $nav-menu-color: #000;
 
@@ -248,11 +248,6 @@ header {
           padding: 0.5rem 1rem;
           border-radius: 50px;
 
-          &:hover {
-            background-color: $nav-link-background-hover;
-            color: #fff;
-          }
-
           &:not(:first-child) {
             margin-left: 2rem;
           }
@@ -266,6 +261,7 @@ header {
           letter-spacing: 2px;
           line-height: inherit;
           color: $nav-link;
+          text-shadow: 0 1px 5px #000;
           text-transform: uppercase;
 
             &::before, &::after {

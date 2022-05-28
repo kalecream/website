@@ -28,7 +28,7 @@ export default function Navbar(children) {
               </Link>
             </div> 
           </li> */}
-          <li className='frostedGlass'>
+          <li>
               <Link href="/about">
                   <a>About</a>
               </Link>
