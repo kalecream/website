@@ -19,14 +19,19 @@ export default function HomeHero({ children, home }) {
 
         <div className={'heroRight'}>
             <div className={'glassBox'}>
-                <span className={'heroHighlight'}>
-                    Follow me
-                </span>
-                <span className={style.heroTinyText}>on my</span>
-                <h1 className={utilStyles.headingXL}>
-                    <span className={style.heroJourney}>developer</span> journey
-                </h1> 
-                <div className={style.socialLinks}>
+                <div className={'heroText frostedGlass rounded'}>
+                    <span className={'heroHighlight'}>
+                        Follow my
+                    </span>
+                    <h1 className={utilStyles.headingXL}>
+                        <span className={style.heroJourney}> </span>
+                    </h1> 
+                    <span className={'heroHighlight'}>
+                        Journey
+                    </span>
+                </div>
+
+                <div className={'socialLinks frostedGlass'}>
                 <Link href="https://twitter.com/KaleCream">
                     <a>
                         {/* <Twitter /> */}
@@ -54,9 +59,10 @@ export default function HomeHero({ children, home }) {
                     </a>
                 </Link>
                 </div>  
-                {/* <button className={style.button}>
+                
+                <button className={'maxWidth '}>
                     View the blog
-                </button> */}
+                </button>
             </div>
         </div>
     </section>

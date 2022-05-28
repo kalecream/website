@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Image from 'next/image'
 import style from '../styles/modules/home.module.css'
+
 import HomeHero from '../components/hero'
 export default function Home({ allPostsData }) {
   return (
@@ -16,8 +17,8 @@ export default function Home({ allPostsData }) {
 
       <HomeHero />
 
-      <section className={style.blogSection}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+      <section className={'blogSection'}>
+        <h1 className={utilStyles.headingXL}>Blog</h1>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
