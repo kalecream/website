@@ -12,11 +12,17 @@ export default function Post({ postData }) {
       </Head>
       <div className={'post-container'}>
         <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
+          <h3 className={'post-title'}>{postData.title}</h3>
+
+          <div className={'metadata-container'}>
+              <Date dateString={postData.date} /> 
+              <div className={'tags-container'}>
+                <a>{postData.tags}</a>
+              </div>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
+          <div className={'post-content'} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
         </article>
       </div>
     </Layout>
@@ -34,8 +40,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id)
   return {
-    props: {
-      postData
-    }
+    props: {  postData }
   }
 }

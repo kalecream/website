@@ -452,6 +452,9 @@ header {
   }
 }
 
+
+
+// Posts
 .post-container{
   width: 100%;
   height: 100vh;
@@ -460,6 +463,26 @@ header {
   max-width: 70rem;
   display: flex;
   flex-direction: column;
+
+    & .post-title {
+      font-size: 2.5rem;
+    }
+
+    & .metadata-container {
+      margin: 1rem 0 ;
+      color: $dark-accent;
+
+      & .tags-container {
+        & a {
+          padding-bottom: 0.2rem;
+          border-bottom: 2px solid $dark-accent;
+        }
+      }
+    }
+
+    & .post-content {
+      color: $light-shade;
+    }
 }
 
 // Extra small devices 600px and below
