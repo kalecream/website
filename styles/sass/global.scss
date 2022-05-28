@@ -323,6 +323,7 @@ header {
   &::before {
     content: '';
     width: 100%;
+    height: 100%;
     z-index: -1;
     height: 100%;
     position: absolute;
@@ -592,8 +593,12 @@ header {
     .heroLeft, .heroRight { width: 100%; }
     & .heroRight {
       & .heroHighlight {
-        font-size: 5rem;
+        font-size: 1.2rem;
       } 
+
+      &  h1 {
+        font-size: 2rem;
+      }
     }
   }
 
