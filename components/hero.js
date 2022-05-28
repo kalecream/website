@@ -60,9 +60,9 @@ export default function HomeHero({ children, home }) {
                 </Link>
                 </div>  
                 
-                <button className={'maxWidth '}>
+                {/* <button className={'maxWidth '}>
                     View the blog
-                </button>
+                </button> */}
             </div>
         </div>
     </section>
