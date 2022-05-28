@@ -42,7 +42,7 @@ $secondary: #abd1c6;
 $tertiary:#e16162;
 
 $quat: rgb(79, 113, 205);
-$quat-lighter: rgb(177, 144, 240);
+$quat-lighter: rgb(195, 166, 250);
 
 
 //shadow
@@ -51,6 +51,9 @@ $shadow: rgba(#000, .5);
 $shadow-lighter: rgba(#000, .35);
 
 $inset-text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+
+// Text
+$text-shadow-dark: 0 1px 5px #000;
 
 //links
 $link-color: $paragraph;
@@ -76,7 +79,7 @@ $nav-link-background-hover: $shadow;
 $nav-link-hover-color: lightgreen;
 $nav-link-hover-underline-color: $quat-lighter;
 $nav-font-weight: 900;
-$nav-menu-color: #000;
+$nav-menu-color: #fff;
 
 // Hero
 $hero-headline: $light-shade;
@@ -326,10 +329,21 @@ header {
     top: 0;
     left: 0;
     // animation: grow 60s linear .5s infinite;
-    background: url(../../public/images/about/park_by_kalecream_de1sg8k-fullview.jpg);
+    background: url(/images/about/park_by_kalecream_de1sg8k-fullview.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+  }
+
+  & .heroGradient {
+      width: 100%; height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      background: linear-gradient(to bottom, transparent, rgba(#000, 1));
+      background-size: cover;
+      z-index: -1;
+      display: flex;
+      place-items: center;
   }
 
   & .glassBox {
@@ -355,9 +369,10 @@ header {
     
 
     & .heroHighlight {
-      // font-family: "HighSpirit";
-      font-size: 1.5rem;
-      text-transform: uppercase;
+      font-family: "HighSpirit";
+      font-size: 5rem;
+      text-shadow: $text-shadow-dark;
+      text-transform: capitalize;
       text-align: center;
       font-weight: 800;
       color: $hero-headline;
@@ -368,6 +383,7 @@ header {
       color: $hero-secondary-headline;
       font-weight: 900;
       font-size: 3rem;
+      text-shadow: $text-shadow-dark;
 
       & span::before {
         content: "Dev";
@@ -386,11 +402,9 @@ header {
 
         & a {
           transform: rotate(15deg);
-          opacity: 75%;
         }
   
         & a:hover { 
-          opacity: 100%;
           transform: rotate(-15deg);
           transition: ease-in-out 0.5s;
         }
@@ -604,11 +618,11 @@ header {
     .heroLeft, .heroRight { width: 100%; }
     & .heroRight {
       & .heroHighlight {
-        font-size: 1.2rem;
+        font-size: 4rem;
       } 
 
       &  h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
       }
     }
   }
