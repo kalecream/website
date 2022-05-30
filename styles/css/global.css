@@ -428,10 +428,18 @@ header nav ul li a:hover::before, header nav ul li a:hover::after {
 
 .post-container .metadata-container .tags-container a {
   padding-bottom: 0.2rem;
-  border-bottom: 2px solid #6d7767;
+  text-transform: capitalise;
+  font-size: 0.9rem;
+  color: #feffff;
+  opacity: 0.6;
 }
 
-.post-container .post-content {
+.post-container .metadata-container .tags-container a:not(:last-child)::after {
+  content: ", ";
+  color: #6d7767;
+}
+
+.post-container .post-content p {
   color: #feffff;
 }
 

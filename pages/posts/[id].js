@@ -6,6 +6,9 @@ import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css'
 
 export default function Post({ postData }) {
+  // TODO change to lowercase before or after split 
+  const postTags = postData.tags.split(',');
+
   return (
     <Layout>
       <Head>
@@ -21,7 +24,23 @@ export default function Post({ postData }) {
                ☆ &nbsp;
               <span id="time">{postData.readTime}</span> minute read
               <div className={'tags-container'}>
-                <a>{postData.tags}</a>
+                {/* TODO . trim whitespace */}
+                {console.log(postTags)}
+                { postTags.length > 0 ?
+                  (
+                    postTags.map(pt => {
+                      return (
+                      // <Link to='/{pt}' key={pt}>
+                        <a href="/" key={pt}>{pt} </a>
+                      // </Link>
+                      )
+                    })
+                  ) : ('')
+                }
+              {/* {postData.postTags.map(
+                  (postData.postTags) => 
+                  <a>{postData.postTags}</a>
+                )} */}
               </div>
           </div>
 
