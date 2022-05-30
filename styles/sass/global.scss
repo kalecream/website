@@ -278,6 +278,7 @@ header {
               background-color: $nav-link-hover-underline-color;
               -webkit-transition: all 0.3s ease-in-out;
                       transition: all 0.3s ease-in-out;  
+              z-index: 10;
             }
 
             &:hover::before, &:hover::after{
@@ -319,6 +320,7 @@ header {
 
 .hero {
   display: flex;
+  z-index: -1;
 
   &::before {
     content: '';

@@ -2,6 +2,7 @@ import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
+import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css'
 
 export default function Post({ postData }) {
@@ -15,7 +16,10 @@ export default function Post({ postData }) {
           <h3 className={'post-title'}>{postData.title}</h3>
 
           <div className={'metadata-container'}>
-              <Date dateString={postData.date} /> 
+
+              <Date dateString={postData.date} /> &nbsp;
+               ☆ &nbsp;
+              <span id="time">{postData.readTime}</span> minute read
               <div className={'tags-container'}>
                 <a>{postData.tags}</a>
               </div>
@@ -23,6 +27,11 @@ export default function Post({ postData }) {
 
           <div className={'post-content'} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
+          <div>
+            <Link href="/">
+              <a>Back to home</a>
+            </Link>
+          </div>
         </article>
       </div>
     </Layout>
