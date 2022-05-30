@@ -729,4 +729,14 @@ header {
       max-width: 98rem;
     }
   }
+
+  .hero {
+    & .heroHighlight {
+      font-size: 10rem;
+    }
+
+    & h1 {
+      font-size: 4rem;
+    }
+  }
 }

@@ -710,4 +710,10 @@ header nav ul li a:hover::before, header nav ul li a:hover::after {
     padding: 3rem 4rem;
     max-width: 98rem;
   }
+  .hero .heroHighlight {
+    font-size: 10rem;
+  }
+  .hero h1 {
+    font-size: 4rem;
+  }
 }
