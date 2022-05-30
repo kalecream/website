@@ -10,12 +10,19 @@ import style from '../styles/modules/home.module.css'
 // import Github from '../public/images/social/twitter.svg'
 // import LinkedIn from '../public/images/social/twitter.svg'
 
-export default function HomeHero({ children, home }) {
+export default function HomeHero() {
   return (
     <section className={'hero'}>
         <div className={'heroGradient'}>
             <div className={'heroLeft'}>
-                <Image alt="" src="/images/illustration/green-ball.png" width={500} height={500}></Image>
+                <Image 
+                    alt="" 
+                    src="/images/illustration/green-ball.png" width={500} 
+                    height={500}
+                    blurDataURL="data:..."
+                    placeholder="blur"
+                >
+                </Image>
             </div>
             <div className={'heroRight'}>
                 <div className={'glassBox'}>

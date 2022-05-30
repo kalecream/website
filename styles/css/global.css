@@ -415,32 +415,44 @@ header nav ul li a:hover::before, header nav ul li a:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #feffff;
 }
 
-.post-container .post-title {
+.post-container .tags-container a {
+  padding-bottom: 0.2rem;
+  text-transform: capitalise;
+  font-size: 0.9rem;
+  color: #e16162;
+  opacity: 0.6;
+  font-weight: 900;
+}
+
+.post-container .tags-container a:not(:last-child)::after {
+  content: ", ";
+  color: #6d7767;
+}
+
+.post-container .post-header h1 {
+  margin-top: 1rem;
   font-size: 2.5rem;
+  color: #859583;
+}
+
+.post-container .post-header h3 {
+  font-size: 1.8rem;
+  color: #232e23;
 }
 
 .post-container .metadata-container {
   margin: 1rem 0;
   color: #6d7767;
-}
-
-.post-container .metadata-container .tags-container a {
-  padding-bottom: 0.2rem;
-  text-transform: capitalise;
   font-size: 0.9rem;
-  color: #feffff;
-  opacity: 0.6;
-}
-
-.post-container .metadata-container .tags-container a:not(:last-child)::after {
-  content: ", ";
-  color: #6d7767;
 }
 
 .post-container .post-content p {
-  color: #feffff;
+  color: #394b39;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 @media only screen and (max-width: 600px) {

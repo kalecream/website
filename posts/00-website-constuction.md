@@ -1,7 +1,11 @@
 ---
-title: 'Hi, This website is still under construction! '
+title: 'Hello, ______'
+subtitle: 'This website is still under construction!'
 date: '2020-05-30'
-tags: 'Hello, World, Fred'
+updated: '2022-05-31'
+tags: 'Featured, Personal'
 ---
 
-Thanks for checking out my website! Unfortunately/Fortunately, I'm still in the process of building things out and putting out content. 
+Thanks for checking out my website! Unfortunately, I'm still in the process of building things out and putting out content. 
+
+<img src="https://www.pexels.com/photo/black-iphone-7-on-brown-table-699122/"></img>

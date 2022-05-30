@@ -27,7 +27,7 @@ export function getSortedPostsData() {
     return {
       id,
       readTime,
-      ...matterResult.data
+      ...matterResult.data as {date:string, tags:string, title:string }
     }
   })
 
@@ -58,7 +58,6 @@ export async function getPostData(id) {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
-  console.log (matterResult)
   const postTags = getPostTags(matterResult.data.tags)
 
   // Use remark to convert markdown into HTML string
@@ -74,6 +73,7 @@ export async function getPostData(id) {
     readTime,
     postTags,
     contentHtml,
-    ...matterResult.data
+    ...matterResult.data as {date:string,
+      author:string,  tags:string, title:string, subtitle: string, updated: string}
   }
 }

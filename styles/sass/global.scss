@@ -94,6 +94,13 @@ $glass-background: $shadow;
 $glass-effect-border: rgba(#fff, .1);
 $glass-effect-shadow: rgba(#000, .5);
 
+// Posts
+$posts-background: $light-shade;
+$tags-color: $tertiary;
+$post-title: $light-accent;
+$post-subtitle: $dark-shade;
+$post: $dark-shade;
+
 // Regular Selectors
 *, *:before, *:after {
   padding: 0;
@@ -465,33 +472,45 @@ header {
   max-width: 70rem;
   display: flex;
   flex-direction: column;
+  background-color: $posts-background;
 
-    & .post-title {
-      font-size: 2.5rem;
-    }
+  & .tags-container {
+    & a {
+      padding-bottom: 0.2rem;
+      text-transform: capitalise;
+      font-size: 0.9rem;
+      color: $tags-color;
+      opacity: 0.6;
+      font-weight: 900;
+
+      &:not(:last-child)::after {
+        content: ", ";
+        color: $dark-accent;
+      }
+    } 
+  }
+
+  & .post-header h1 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: $post-title;
+  }
+
+  & .post-header h3 {
+    font-size: 1.8rem;
+    color: $post-subtitle;
+  }
 
     & .metadata-container {
       margin: 1rem 0 ;
       color: $dark-accent;
-
-      & .tags-container {
-        & a {
-          padding-bottom: 0.2rem;
-          text-transform: capitalise;
-          font-size: 0.9rem;
-          color: $light-shade;
-          opacity: 0.6;
-
-          &:not(:last-child)::after {
-            content: ", ";
-            color: $dark-accent;
-          }
-        } 
-      }
-    }
+      font-size: 0.9rem;
+}
 
     & .post-content p {
-      color: $light-shade;
+      color: lighten($post,10%);
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 }
 
