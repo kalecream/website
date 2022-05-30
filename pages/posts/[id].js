@@ -19,7 +19,7 @@ export default function Post({ postData }) {
           <h3 className={'post-title'}>{postData.title}</h3>
 
           <div className={'metadata-container'}>
-
+              {/* TODO: add last updated time to posts */}
               <Date dateString={postData.date} /> &nbsp;
                ☆ &nbsp;
               <span id="time">{postData.readTime}</span> minute read
@@ -31,7 +31,7 @@ export default function Post({ postData }) {
                     postTags.map(pt => {
                       return (
                       // <Link to='/{pt}' key={pt}>
-                        <a href="/" key={pt}>{pt} </a>
+                        <a key={pt}>{pt} </a>
                       // </Link>
                       )
                     })
