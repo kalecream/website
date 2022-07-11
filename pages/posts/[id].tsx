@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import Link from 'next/link';
+import Image from 'next/image';
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
@@ -29,6 +30,7 @@ export default function Post({ postData }:
       <div className={'post-container'}>
         <article>
           <div className={'post-header'}>
+            {/* <Image src={`/images/illustration/${postData.imgid}.png`} width="300" height="300"></Image> */}
             <div className={'tags-container'}>
                     {/* TODO . trim whitespace */}
                     { postTags.length > 0 ?
@@ -44,8 +46,11 @@ export default function Post({ postData }:
             </div>
 
             <h1 className={'post-title'}>{postData.title}</h1>
-            <h3>{postData.subtitle}</h3>
-
+              {
+                  postData.subtitle != '' ? <span>
+                    <h3>{postData.subtitle}</h3>
+                  </span>  : ''
+                }
             <div className={'metadata-container'}>
               By Sabrina Medwinter &nbsp; • &nbsp;
                 {
@@ -61,7 +66,6 @@ export default function Post({ postData }:
             </div>
           </div>
           <div className={'post-content'} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-
           <div>
             <Link href="/">
               <a>Back to home</a>

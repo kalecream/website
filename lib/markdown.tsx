@@ -28,4 +28,4 @@ p: (paragraph: { children?: boolean; node?: any}) => {
     )
   }
   return <p>{paragraph.children}</p>
-},
+}

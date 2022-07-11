@@ -17,6 +17,18 @@
   src: local('HighSpirit'), url(/fonts/HighSpirited.ttf) format('truetype');
 }
 
+$col1: #F4C2C2;
+$col2: #F4D4CB;
+$col6: #F7F7E1;
+$col5: #D1EDCC;
+$col4: #C4E6B8;
+$col3: #B3D9B2;
+
+$black: #181A18;
+$white: #FBFAF5;
+
+
+
 // Colours
 // http://colormind.io/bootstrap/
 $light-shade: #feffff;
@@ -27,23 +39,17 @@ $main-color: #5b945d;
 // This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. 
 $dark-accent: #6d7767;
 //  Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best. 
-$dark-shade: #232e23;
+$dark-shade: #181A18;
 // Use as the text color for dark-on-light designs, or as the background for inverted designs. 
 
 $background: $dark-shade;
-$paragraph: $light-accent;
+$paragraph: $white;
 
 $headline: #373f27;
 
 // illustration
 $stroke: $headline;
 $main: $background;
-$secondary: #abd1c6;
-$tertiary:#e16162;
-
-$quat: rgb(79, 113, 205);
-$quat-lighter: rgb(195, 166, 250);
-
 
 //shadow
 $shadow-darker: rgba(#000, .75);
@@ -60,30 +66,30 @@ $link-color: $paragraph;
 $link-hover-color: #fff;
 
 // button
-$button-border: $light-shade;
+$button-border: $col3;
 $button-text: $light-shade;
 $button-background: $shadow-lighter;
-$button-background-hover: $light-shade;
-$button-color-hover: $dark-shade;
+$button-background-hover: $col3;
+$button-color-hover: $black;
 
 // main
-$heading-color: $light-shade;
+$heading-color: $white;
 
 //navigation
-$site-title-color: #fff;
-$site-title-stroke: #fff;
-$nav-border: #fff;
+$site-title-color: $white;
+$site-title-stroke: $white;
+$nav-border: $white;
 $nav-link: #fff;
 $nav-link-background: $shadow-lighter;
 $nav-link-background-hover: $shadow;
 $nav-link-hover-color: lightgreen;
-$nav-link-hover-underline-color: $quat-lighter;
+$nav-link-hover-underline-color: $col3;
 $nav-font-weight: 900;
 $nav-menu-color: #fff;
 
 // Hero
 $hero-headline: $light-shade;
-$hero-secondary-headline: $quat-lighter;
+$hero-secondary-headline: $col3;
 $hero-paragraph: #fff;
 $hero-gradient: linear-gradient(to bottom, transparent 0%, rgba($dark-shade, 1) 90%);
 
@@ -94,17 +100,22 @@ $glass-background: $shadow;
 $glass-effect-border: rgba(#fff, .1);
 $glass-effect-shadow: rgba(#000, .5);
 
+// Blog Section
+$post-border: $col3;
+
+
 // Posts
-$posts-background: $light-shade;
-$tags-color: $tertiary;
+$posts-background: $black;
+$tags-color: $col3;
 $post-title: $light-accent;
 $post-subtitle: $dark-shade;
 $post: $dark-shade;
 
+//footer
+$footer-background: $dark-shade;
+
 // Regular Selectors
 *, *:before, *:after {
-  padding: 0;
-  margin: 0;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -113,10 +124,9 @@ $post: $dark-shade;
   text-rendering: optimizeLegibility;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -125,21 +135,20 @@ body {
   font-size: 1rem;
   font-family: 'Proxima Nova', sans-serif;
   line-height: 1.5;
-
-  // main {
-  //   width: 100vw;
-  //   height: 100vh;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-content: center;
-  //   flex-direction: column;
-  // }
   
   & section {
     display: grid;
     height: auto;
     padding: 3rem;
     place-items: center;
+
+    & .sectionTitle {
+      font-size: 3rem;
+      color: $col3;
+      letter-spacing: 2px;
+      text-align: center;
+      // text-transform: uppercase;
+    }
 
       // &:nth-child(odd) {
       //   background-color: $background;
@@ -158,16 +167,23 @@ body {
 h1, h2, h3 {
   color: $heading-color;
   font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 2.5rem;
   text-transform: capitalize;
 }
 
 h1 {
   margin-top: 0px;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
   line-height: 1.15;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -188,18 +204,16 @@ a {
       
 }
 
-button {
-  margin: 1rem 0 ;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content:center;
-  border-radius: 50px;
-  background-color: $button-background;
+.button {
+  margin: 3% 5%;
+  width: 50%;
   border: 1px solid $button-border;
-  box-shadow:(0 2px 5px $glass-effect-shadow);
   color: $button-text;
-  font-size: 1rem !important;
+  padding: 3%;
   text-transform: capitalize;
+  background-color: $button-background;
+  border-radius: 5px;
+  text-align: center;
 
   &:hover {
     background-color: $button-background-hover;
@@ -222,23 +236,23 @@ img {
 
 header {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 
   & nav {
     display: flex;
     flex-direction: row;
-    flex: 1;
-    flex-basis: auto;
+    flex: 2 auto;
     justify-content: space-between;
     align-items: center;
     max-width: 90rem;
     width: 100%;
-    padding: 1rem 4rem;
-    margin: 0 auto;
+    padding: 0.5rem 4rem;
 
       & #site-title {
         display: block;
         font-family: inherit;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: 900;
         color: $site-title-color;
         text-shadow: 0 1px 5px #000;
@@ -267,7 +281,7 @@ header {
           display: block;
           position: relative;
           font-family: inherit;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           font-weight: $nav-font-weight;
           letter-spacing: 2px;
           line-height: inherit;
@@ -297,6 +311,22 @@ header {
   }
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 3%;
+  padding: 0 2%;
+  margin: 3% 5%;
+  background-color: $footer-background;
+
+  > * {
+    text-align: center;
+  }
+}
+
+
+
 // General Class
 .rounded {
   border-radius: 50px;
@@ -315,20 +345,34 @@ header {
   text-shadow: 0 1px 5px #000;
 }
 
-// Specific Classes
-
-.hero, .blogSection {
-  width: 100%;
-  margin: 1rem auto;
-  height: 90vh;
-  display: grid;
+.socialLinks {
+  display: flex;
+  max-width: 80rem;
   place-items: center;
+  justify-content: space-around;
+  border-radius: 50px;
+  margin: 0 20%;
+  padding: 0.4rem;
+
+    & a {
+      transform: rotate(15deg);
+    }
+
+    & a:hover { 
+      transform: rotate(-15deg);
+      transition: ease-in-out 0.5s;
+    }
 }
 
-.hero {
-  display: flex;
-  z-index: -1;
+// Specific Classes
 
+.hero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  place-items: center;
+
+  // background
   &::before {
     content: '';
     width: 100%;
@@ -343,8 +387,10 @@ header {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    opacity: 0.5;
   }
 
+  // dark overlay
   & .heroGradient {
       width: 100%; height: 100%;
       position: absolute;
@@ -356,93 +402,19 @@ header {
       place-items: center;
   }
 
-  & .glassBox {
-    border-radius: 5px;
+  .heroRight {
     position: relative;
-    text-shadow: 0 1px 5px $inset-text-shadow;
-    // -webkit-text-stroke: 2px $glass-effect-shadow;
-    // filter: drop-shadow(0, 0, 0, #000);
-    padding: 4rem;
-
-    .heroText {
-      padding: 1rem 2rem;
-    }
-
-    .heroRight {
-      position: relative;
-      border: solid 1px $glass-effect;
-      box-shadow:(0 2px 5px $glass-effect-shadow);
-      text-shadow: 0 1px 5px #000;
-      clip-path: inset(10em);
-      // filter: blur($blur);
-    }
-    
-
-    & .heroHighlight {
-      font-family: "HighSpirit";
-      font-size: 5rem;
-      text-shadow: $text-shadow-dark;
-      text-transform: capitalize;
-      text-align: center;
-      font-weight: 800;
-      color: $hero-headline;
-    }
+    text-shadow: 0 1px 5px #000;
+    display: flex;
+    flex-direction: column;
 
     & h1 {
       text-transform: uppercase;
       color: $hero-secondary-headline;
-      font-weight: 900;
-      font-size: 3rem;
-      text-shadow: $text-shadow-dark;
-
-      & span::before {
-        content: "Dev";
-        animation: heroWords infinite 10s;
-      }
-    }
-
-    & .socialLinks {
-      display: flex;
-      max-width: 80rem;
-      place-items: center;
-      justify-content: space-around;
-      border-radius: 50px;
-      margin-top: 2rem;
-      padding: 0.4rem;
-
-        & a {
-          transform: rotate(15deg);
-        }
-  
-        & a:hover { 
-          transform: rotate(-15deg);
-          transition: ease-in-out 0.5s;
-        }
-    }
-  
-    .button {
-      width: 100%;
+      font-size: 4.5rem;
     }
   }
-}
-
-@keyframes heroWords {
-  0% {
-    content: "Dev";
   }
-
-  25% {
-    content: "3D Artist"
-  }
-
-  50% {
-    content: "Productivity"
-  }
-
-  100% {
-    content: "Adulting"
-  }
-}
 
 .heroLeft, .heroRight {
   float: left;
@@ -453,23 +425,48 @@ header {
 }
 
 .blogSection {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  margin: 5%;
+
+  h2 {
+    width: 100%;
+  }
+
+  .blogDiv {
+    display: flex;
+    flex: 2 1 auto;
+    flex-direction: column;
+    place-items: center;
+    padding: 5% 3%;
+    margin: 1%;
+    border-radius: 5px;
+    border: 1px solid $col3;
+    cursor: pointer;
+
+    &:hover {
+      background: radial-gradient($background 60%, transparent, $col3 );
+      border: none;
+    }
+  }
+
   & a {
     color: $light-shade;
   }
   & small {
-    color: $dark-accent;
+    color: $white;
+    opacity: 0.6;
   }
 }
-
-
 
 // Posts
 .post-container{
   width: 100%;
   height: 100vh;
   padding: 4rem;
-  margin: 3rem auto 6rem;
-  max-width: 70rem;
+  margin: 2% auto 5%;
+  max-width: 75rem;
   display: flex;
   flex-direction: column;
   background-color: $posts-background;
@@ -478,10 +475,14 @@ header {
     & a {
       padding-bottom: 0.2rem;
       text-transform: capitalise;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: $tags-color;
       opacity: 0.6;
       font-weight: 900;
+
+      &:before {
+        content: "#"
+      }
 
       &:not(:last-child)::after {
         content: ", ";
@@ -492,7 +493,7 @@ header {
 
   & .post-header h1 {
     margin-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 4em;
     color: $post-title;
   }
 
@@ -503,15 +504,33 @@ header {
 
     & .metadata-container {
       margin: 1rem 0 ;
-      color: $dark-accent;
-      font-size: 0.9rem;
+      color: fade-out($white,0.5);
+      font-size: 1rem;
 }
 
     & .post-content p {
-      color: lighten($post,10%);
-      font-size: 1.1rem;
+      color: lighten($col3,10%);
+      font-size: 1.2rem;
       line-height: 1.8;
     }
+}
+
+.contact-section {
+  margin: 0 25%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+// About page
+.about, .blogPostContainer {
+  margin: 5% 10%;
+  line-height: 1.8;
+  
+  p {
+    font-size: 1.2rem;
+  }
 }
 
 // Extra small devices 600px and below
@@ -680,6 +699,10 @@ header {
     }
   }
 
+  .blogDiv {
+    width: 100%;
+  }
+
 }
   
 
@@ -704,6 +727,9 @@ header {
         animation: none;
       }
     }
+
+    .blogDiv {
+      width: 48%;}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -723,9 +749,9 @@ header {
   .col-12 {width: 100%;}
 
   header{
-    & nav {
-      padding: 3rem 4rem;
-    }
+    // & nav {
+    //   padding: 3rem 4rem;
+    // }
   }
 
   nav ul li::before {
@@ -765,5 +791,9 @@ header {
     & h1 {
       font-size: 4rem;
     }
+  }
+
+  .blogDiv {
+    width: 25%;
   }
 }
