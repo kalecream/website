@@ -40,6 +40,7 @@ yarn-error.log*
 
 
 #hide unfinished pages
+.sass-cache
 **/unfinished/*
 **css/*
 styles/css
