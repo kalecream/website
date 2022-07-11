@@ -4,7 +4,7 @@ import styles from '../styles/modules/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Navbar from './global/navbar'
-import Footer from '@components/global/footer'
+import Footer from './global/footer'
 
 const name = 'KaleCream'
 export const siteTitle = 'KaleCream'
