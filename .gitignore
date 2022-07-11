@@ -36,3 +36,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+#css
+**/css/
+**/.sass-cache/
+
+#hide unfinished pages
+**/unfinished/*
