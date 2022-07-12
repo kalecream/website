@@ -30,7 +30,7 @@ export default function Post({ postData }:
       <div className={'post-container'}>
         <article>
           <div className={'post-header'}>
-            {/* <Image src={`/images/illustration/${postData.imgid}.png`} width="300" height="300"></Image> */}
+            <Image className={'post-image'} src={`/images/illustration/${postData.imgid}.png`} width="300" height="300"></Image>
             <div className={'tags-container'}>
                     {/* TODO . trim whitespace */}
                     { postTags.length > 0 ?
