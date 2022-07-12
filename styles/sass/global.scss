@@ -132,12 +132,12 @@ html, body {
 body {
   background-color: $background;
   color: $paragraph;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'Proxima Nova', sans-serif;
   line-height: 1.5;
 
   & main {
-    margin: 5% 1% 10% 1%;
+    margin: 5% 1% 25% 1%;
   }
   
   & section {
@@ -163,6 +163,10 @@ body {
       //   background-color: $secondary;
       // }
   }
+}
+
+article {
+  padding: 0 0 10% 0;
 }
 
 .hidden {
@@ -324,8 +328,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 5%;
-  padding: 5%;
   background-color: $footer-background;
 
   > * {
@@ -359,7 +361,6 @@ footer {
   place-items: center;
   justify-content: space-around;
   border-radius: 50px;
-  margin: 0 20%;
   padding: 0.4rem;
 
     & a {
@@ -472,13 +473,15 @@ footer {
   width: 100%;
   height: 100vh;
   padding: 4rem;
-  margin: 5% auto 10%;
+  margin: 5% auto 20% auto;
   max-width: 75rem;
   display: flex;
   flex-direction: column;
-  background-color: $posts-background;
+  background-color: $posts-background; 
 
-  & .post-image {
+  img {
+    display: flex;
+    place-items: center;
   }
 
   & .tags-container {
@@ -510,6 +513,10 @@ footer {
       margin: 0.5%;
     }
 
+    & h1, h3 {
+      text-align: center;
+    }
+
     & h1 {
       font-size: 6rem;
       color: $post-title;
@@ -527,25 +534,38 @@ footer {
     }
   }
 
-    & .post-content {
+  & .post-content {
 
-      & h1 {
-        vertical-align: middle;
-        position: relative;
-        top: 50%;
+    & h1 {
+      margin: 10% 0 5% 0;
+        text-align: center;
+        font-size: 3.5rem;
       }
 
-     & p {
+    & p {
       color: lighten($col3,10%);
       font-size: 1.2rem;
       line-height: 1.8;
     }
 
+    & a {
+      border-bottom: 1px solid;
+    };
+
     & li {
-      list-style: lower-greek;
+      list-style: "🌱 ";
+      list-style-position: inside;
+      line-height: 1.8;
+      color: lighten($col3,10%);
+    }
+
+    & .home-link {
+      padding: 10% 0;
     }
   }
 }
+
+
 
 /*  Extra small devices (phones, 600px and down) & Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px){
@@ -772,6 +792,10 @@ footer {
       &::before {
         animation: none;
       }
+
+      .socialLinks {
+        margin: 0 10%;
+      }
     }
 
     // .blogDiv {
@@ -823,6 +847,10 @@ footer {
   .heroRight {
     width: 100%;
   }
+
+  .socialLinks {
+    margin: 0 30%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -850,5 +878,9 @@ footer {
 
   .contact-section {
     margin: 0 25%;;
+  }
+
+  .socialLinks {
+    margin: 0 40%;
   }
 }

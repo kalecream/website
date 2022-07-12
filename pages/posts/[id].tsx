@@ -53,7 +53,7 @@ export default function Post({ postData }:
                   </span>  : ''
                 }
             <div className={'metadata-container'}>
-              By Sabrina Medwinter &nbsp; • &nbsp;
+            Sabrina Medwinter &nbsp; • &nbsp;
                 {
                   postData.updated != '' ? <span>
                     Updated: <Date dateString={postData.updated} />
@@ -63,11 +63,11 @@ export default function Post({ postData }:
                   </span>
                 }
                 &nbsp; • &nbsp;
-                <span id="time">{postData.readTime}</span> minute read
+                <span id="time">{postData.readTime}</span> min
             </div>
           </div>
           <div className={'post-content'} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-          <div>
+          <div className={'home-link'}>
             <Link href="/">
               <a>Back to home</a>
             </Link>

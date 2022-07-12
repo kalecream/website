@@ -37,9 +37,10 @@ export default function Home({
   allPostsData: {
     date: string
     title: string
+    subtitle: string
     id: string
     readTime: number
-    image: string
+    imgid: string
   }[]
 }) {
   return (
@@ -52,12 +53,13 @@ export default function Home({
 
       <section className={'blogSection'}>
         <h2 className={'sectionTitle'}>Blog</h2>
-        {allPostsData.map(({ id, date, title, readTime, image }) => (
+        {allPostsData.map(({ id, date, title, readTime, imgid, subtitle }) => (
 
         <Link href={`/posts/${id}`}>
           <div className="blogDiv">
               <Image src={`/images/illustration/${id}.png`} height="200px" width="200px" ></Image>
               <h3>{title}</h3>
+              <h4>{subtitle}</h4>
               <p>
                 <Date dateString={date} /> &nbsp; <span id="time">{readTime}</span> min read
               </p>

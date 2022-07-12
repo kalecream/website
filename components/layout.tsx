@@ -18,9 +18,7 @@ export default function Layout({
   }) {
   return (
     <div className={styles.container}>
-      <main>
         {children}
-      </main>
     </div>
   )
 }
