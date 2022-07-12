@@ -26,7 +26,7 @@ export default function HomeHero() {
             </div>
             <div className={'heroRight'}>
                 <h1>Building Solutions</h1>
-                <h3>Web developer solving common problems through code.</h3>
+                <h3>Web developer solving common problems.</h3>
                 {/* <a className={'button'} href="mailto:sabrinamedwinter@gmail.com">Shoot me an email</a> */}
             </div>
         </div>
