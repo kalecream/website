@@ -34,6 +34,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+#vscode
+.vscode
+
 # typescript
 *.tsbuildinfo
 
@@ -42,6 +45,4 @@ yarn-error.log*
 #hide unfinished pages
 .sass-cache
 **/unfinished/*
-**css/*
 styles/css
-pages/unfinished
