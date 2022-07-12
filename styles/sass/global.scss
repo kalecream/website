@@ -529,16 +529,20 @@ footer {
 
     & .post-content {
 
-      h1 {
+      & h1 {
         vertical-align: middle;
         position: relative;
         top: 50%;
       }
 
-     p {
+     & p {
       color: lighten($col3,10%);
       font-size: 1.2rem;
       line-height: 1.8;
+    }
+
+    & li {
+      list-style: lower-greek;
     }
   }
 }

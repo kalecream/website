@@ -4,8 +4,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import '../styles/css/global.css'
-import Navbar from '@components/global/navbar'
-import Footer from "@components/global/footer";
+import Navbar from '../components/global/navbar'
+import Footer from "../components/global/footer";
 
 // eslint-disable-next-line import/no-default-export
 

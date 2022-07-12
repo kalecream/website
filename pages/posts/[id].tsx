@@ -17,6 +17,7 @@ export default function Post({ postData }:
     tags: string
     readTime: number
     contentHtml: string
+    imgid: string
     }
   }) {
   // TODO change to lowercase before or after split 

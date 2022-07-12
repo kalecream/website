@@ -479,6 +479,10 @@ footer > * {
   line-height: 1.8;
 }
 
+.post-container .post-content li {
+  list-style: lower-greek;
+}
+
 /*  Extra small devices (phones, 600px and down) & Small devices (portrait tablets and large phones, 600px and up) */
 .contact-section {
   text-align: justify;

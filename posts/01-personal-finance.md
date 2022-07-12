@@ -28,22 +28,24 @@ I started off like most persons with a google sheet or excel generated template 
 Unfortunately, I do not remember why I stopped using it. It seems pretty solid in my re-checking of the tool for this article.
 
 ## Feature Must Have:
-- Synchronise between multiple devices.
-- Multiple currencies.
-- Add recurring transactions.
-- Keep track of a savings plan.
-- Manage debts and loans.
-- Reports
-- Expense budget envelopes
-
-## Feature Extras:
-- Scan recipts and auto-process them.
-
-
-## Missing For Me:
-- Not able to access some savings & some other accounts in the web app.
++ Synchronise between multiple devices.
++ Multiple currencies.
++ Add recurring transactions.
++ Keep track of a savings plan.
++ Manage debts and loans.
++ Reports
++ Expense budget envelopes
++ Scan recipts and auto-process them.
++ Not able to access some savings & some other accounts in the web app.
 
 # BlueCoin
+
+# Aspire budgeting
+ 
+Aspire budgeting is a google spreadsheet that I came across because of its [reddit community](https://old.reddit.com/r/aspirebudgeting/).  This community has Andriod and iOS apps to make data entry a little easier, however, [the voluntary developer who made these apps took a step back recently so the iOS  app may not be available anymore.](https://old.reddit.com/r/aspirebudgeting/comments/v78yir/time_to_say_goodbye/)
+
+## Feature Must Have         
+- Multiple Currencies
 
 <br/>
 <br/>
