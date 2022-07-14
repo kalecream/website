@@ -2,7 +2,7 @@
 title: 'Personal Finance'
 subtitle: 'A journey through apps and spreadsheets.'
 date: '2022-07-11'
-updated: '2022-07-11'
+updated: '2022-07-14'
 tags: 'Featured,Finance'
 imgid: '01-personal-finance'
 ---
@@ -11,11 +11,13 @@ Recently three persons asked me to list some budgeting apps and spreadsheets so 
 
 The things I want out of a personal finance tool are:
 
-- Monthly Balance Visualization
-- Monthly Balance Prediction
+- The ability to use multiple currencies.
+- Monthly Balance & Visualization
+- Monthly Balance with Forecasting and Visualization
 - Weekly Expense Prediction
+- Reoccuring transactions
 - Periodic Expense Report Breakdown
-- Be customisable as I decide which financial metrics I need.
+- Be customisable as my financial needs grow.
 
 I would ultimately love to connect to an API to automate handling expenses, but one of my two local Jamaican banks does not even allow me to download a CSV file so that dream is a long way off. Scotiabank does allow me to download a pdf (without properly formatted tables) so I need a tool to make the rest of my finance record keeping as painless as possible.
 
@@ -27,7 +29,11 @@ I started off like most persons with a google sheet or excel generated template 
 
 Unfortunately, I do not remember why I stopped using it. It seems pretty solid in my re-checking of the tool for this article.
 
-## Features
+## Features I wanted
+- Monthly Balance & Visualization
+- Weekly Expense Prediction
+
+## Extra Features
 - Synchronise between multiple devices.
 - Multiple currencies.
 - Add recurring transactions.
@@ -48,4 +54,14 @@ At the time that I used it, someone had posted an app script to create recurring
 
 ## Feature Must Have         
 - Multiple Currencies
-- Recurring transactions
+- Recurring transact Beancount
+
+I started off with beancount because of an [Obsidian](https://obsidian.md/) plug-in called [Ledger-obsidian](https://github.com/tgrosinger/ledger-obsidian). I could not for the life of my get that plug-in to work so I read around the internet for a bit and decided to just use the original [ledger](https://github.com/ledger/ledger) from the cli as intended. I found it a little counterintuitive and that led me to beancount and fava!
+
+[Fava](https://fava.pythonanywhere.com/example-beancount-file/income_statement/) is a web interface for beancount making it easier to visualize your finance. The best part is that fava and beancount are both written in Python and therefore easily extended to fit my needs.
+
+## What is beancount?
+
+A double-entry bookkeeping computer language that lets you define financial transaction records in a text file, read them in memory, generate a variety of reports from them, and provides a web interface.
+
+It's in a style that is similar to ledger. You may want to check out the [reddit community](https://old.reddit.com/r/plaintextaccounting/) or the [plaintextaccounting website](https://plaintextaccounting.org/).

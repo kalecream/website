@@ -14,6 +14,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
+    "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
@@ -49,6 +50,7 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "pages/temp"
   ]
 }

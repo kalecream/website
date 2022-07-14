@@ -29,9 +29,9 @@ export default function Navbar(children) {
             </div> 
           </li> */}
           <li>
-              <Link href="/about">
+              {/* <Link href="/about">
                   <a>About</a>
-              </Link>
+              </Link> */}
           </li>
         </ul> 
         </div>
