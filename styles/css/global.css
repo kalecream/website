@@ -675,6 +675,9 @@ footer > * {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  body section {
+    padding: 0%;
+  }
   .hero::before {
     -webkit-animation: none;
             animation: none;
@@ -693,6 +696,19 @@ footer > * {
   }
   .blogSection .blogDiv {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogSection .blogDiv h4 {
+    display: none;
+  }
+  .blogSection .blogDiv h3, .blogSection .blogDiv h4, .blogSection .blogDiv p {
+    overflow-wrap: break-word;
   }
   .contact-section {
     margin: 0 5%;
