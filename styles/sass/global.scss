@@ -467,8 +467,8 @@ footer {
     cursor: pointer;
 
     &:hover {
-      background: radial-gradient($background 60%, transparent, $color-primary );
-      border: none;
+      background: radial-gradient($background 65%, transparent, $color-primary );
+      transition: ease-in-out 1s;
     }
 
     & h3 {

@@ -428,8 +428,9 @@ footer > * {
 }
 
 .blogSection .blogDiv:hover {
-  background: radial-gradient(#FBFAF5 60%, transparent, #5b945d);
-  border: none;
+  background: radial-gradient(#FBFAF5 65%, transparent, #5b945d);
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
 }
 
 .blogSection .blogDiv h3 {
