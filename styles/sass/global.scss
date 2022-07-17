@@ -31,6 +31,7 @@ $color-primary-light-5: mix($color-white, $color-primary, 50%) !default; /* a0cf
 $color-primary-light-6: mix($color-white, $color-primary, 60%) !default; /* b3d8ff */
 $color-primary-light-7: mix($color-white, $color-primary, 70%) !default; /* c6e2ff */
 $color-primary-light-8: mix($color-white, $color-primary, 80%) !default; /* d9ecff */
+$color-primary-light-9: mix($color-white, $color-primary, 90%) !default; /* ecf5ff */
 
 $color-primary-dark-1: mix($color-black, $color-primary, 10%) !default; /* 0f0f0f */
 $color-primary-dark-2: mix($color-black, $color-primary, 20%) !default; /* 0f0f0f */
@@ -40,21 +41,20 @@ $color-primary-dark-5: mix($color-black, $color-primary, 50%) !default; /* 0f0f0
 $color-primary-dark-6: mix($color-black, $color-primary, 60%) !default; /* 0f0f0f */
 $color-primary-dark-7: mix($color-black, $color-primary, 70%) !default; /* 0f0f0f */
 $color-primary-dark-8: mix($color-black, $color-primary, 80%) !default; /* 0f0f0f */
+$color-primary-dark-9: mix($color-black, $color-primary, 90%) !default; /* 0f0f0f */
 
 $color-success: #00BFA5;
 $color-warning: #FF9F1C;
 $color-danger: #FF5252;
 $color-info: #00BFA5;
 
-// Colours
+// Variables
 $background: $color-white;
 $paragraph: $color-black;
+$heading-color: $color-primary;
 
-// illustration
-$stroke: $color-primary;
-$main: $background;
+$image-overlay: $color-primary;
 
-//shadow
 $shadow-darker: rgba(#000, .75);
 $shadow: rgba(#000, .5);
 $shadow-lighter: rgba(#000, .35);
@@ -62,37 +62,31 @@ $shadow-lighter: rgba(#000, .35);
 $inset-text-shadow: 2px 2px 3px $shadow;
 $text-shadow-dark: 0 1px 5px #000;
 
-//links
 $link-color: $paragraph;
 $link-hover-color: $color-primary;
 
-// button
 $button-border: $color-primary;
 $button-text: $color-primary-dark-2;
 $button-background: $background;
 $button-background-hover: $color-primary;
 $button-color-hover: $background;
 
-// main
-$heading-color: $color-white;
-
-//navigation
+  // header variables
 $site-title-color: $color-white;
 $site-title-stroke: $color-white;
 $nav-border: $color-white;
 $nav-link: #fff;
 $nav-link-background: $shadow-lighter;
 $nav-link-background-hover: $shadow;
-$nav-link-hover-color: lightgreen;
+$nav-link-hover-color: $color-primary;
 $nav-link-hover-underline-color: $color-primary;
 $nav-font-weight: 900;
 $nav-menu-color: #fff;
 
-// Hero
-$hero-headline: $color-primary-light-4;
-$hero-secondary-headline: $color-primary;
-$hero-paragraph: #fff;
-$hero-gradient: linear-gradient(to bottom, transparent 0%, rgba($color-primary-dark-4, 1) 90%);
+$hero-headline: $color-primary;
+$hero-subheadline: $color-primary-dark-5;
+$hero-paragraph: $color-primary-light-2;
+$hero-gradient: linear-gradient(to bottom, transparent 30%, rgba($color-white, 1) 100%);
 
 $blur: 5px;
 $shadow-opacity: 0.3;
@@ -103,17 +97,17 @@ $glass-effect-shadow: rgba(#000, .5);
 
 // Blog Section
 $post-border: $color-primary;
+$post-metadata: $color-primary-dark-2;
 
 
 // Posts
-$posts-background: $color-black;
-$tags-color: $color-primary;
-$post-title: $color-primary-light-2;
+$tags-color: $color-primary-dark-3;
+$post-title: $color-primary;
 $post-subtitle: $color-primary-dark-4;
 $post: $color-primary-dark-4;
 
 //footer
-$footer-background: $color-primary-dark-4;
+$footer-background: $color-primary;
 
 // Regular Selectors
 *, *:before, *:after {
@@ -331,14 +325,19 @@ header {
 }
 
 footer {
-  position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: $footer-background;
+
+  & p {
+    color: $background;
+    font-weight: 800;
+  }
 
   > * {
     text-align: center;
@@ -421,33 +420,37 @@ footer {
       place-items: center;
   }
 
+  .heroLeft, .heroRight {
+    float: left;
+    place-items: center;
+    height: auto;
+    text-align: center;
+  }
+
   .heroRight {
     position: relative;
-    text-shadow: 0 1px 5px #000;
+    // text-shadow: 0 1px 5px $color-black;
     display: flex;
     flex-direction: column;
 
     & h1 {
       text-transform: uppercase;
-      color: $hero-secondary-headline;
+      color: $hero-headline;
       font-size: 4.5rem;
+    }
+
+    & h3 {
+      color: $hero-subheadline;
+      font-size: 1.5rem;
     }
   }
   }
 
-.heroLeft, .heroRight {
-  float: left;
-  width: 50%;
-  place-items: center;
-  height: auto;
-  text-align: center;
-}
-
 .blogSection {
   display: flex;
   flex-wrap: wrap;
-  place-items: center;
-  margin: 5%;
+  justify-content: space-around;
+  margin: 3% 0 ;
 
   h2 {
     width: 100%;
@@ -456,16 +459,32 @@ footer {
   .blogDiv {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
     padding: 5% 3%;
     margin: 1%;
     border-radius: 5px;
-    border: 1px solid $color-primary;
+    border: 2px solid $color-primary;
     cursor: pointer;
 
     &:hover {
       background: radial-gradient($background 60%, transparent, $color-primary );
       border: none;
+    }
+
+    & h3 {
+      font-size: 2.5rem;
+      color: $color-primary;
+    }
+
+    & h4 {
+      font-size: 1.3rem;
+      word-wrap: normal;
+      color: $color-primary-dark-4;
+    }
+
+    & p {
+      color: $color-primary-dark-9;
+      opacity: 0.8;
     }
   }
 
@@ -480,14 +499,11 @@ footer {
 
 // Posts
 .post-container{
-  width: 100%;
-  height: 100vh;
   padding: 4rem;
   margin: 5% auto 20% auto;
   max-width: 75rem;
   display: flex;
   flex-direction: column;
-  background-color: $posts-background; 
 
   img {
     display: flex;
@@ -528,13 +544,13 @@ footer {
     }
 
     & h1 {
-      font-size: 6rem;
+      font-size: 4rem;
       color: $post-title;
     }
 
     & h3 {
-      font-size: 1.8rem;
-      color: fade-out($color: $color-white, $amount: 0.25);
+      font-size: 2rem;
+      color: $color-primary-light-3;
     }
 
     & .metadata-container {
@@ -553,7 +569,7 @@ footer {
       }
 
     & p {
-      color: lighten($color-primary,10%);
+      color: $post;
       font-size: 1.2rem;
       line-height: 1.8;
     }
@@ -566,15 +582,19 @@ footer {
       list-style: "🌱 ";
       list-style-position: inside;
       line-height: 1.8;
-      color: lighten($color-primary,10%);
-    }
-
-    & .home-link {
-      padding: 10% 0;
+      color: $post;
     }
   }
 }
 
+.home-link {
+  padding: 10% 0;
+  font-size: 1.2rem;
+
+  &::before{
+    content: "🏕️  ";
+  }
+}
 
 
 /*  Extra small devices (phones, 600px and down) & Small devices (portrait tablets and large phones, 600px and up) */
@@ -593,6 +613,10 @@ footer {
   display: flex;
   flex-direction: column;
   place-items: center;
+
+  & > * {
+    margin: 3% 0;
+  }
 }
 
 // About page
@@ -889,6 +913,10 @@ footer {
   }
 
   .hero {
+    .heroLeft, .heroRight {
+      width: 50%;
+    }
+
     & .heroHighlight {
       font-size: 10rem;
     }
