@@ -17,38 +17,41 @@
   src: local('HighSpirit'), url(/fonts/HighSpirited.ttf) format('truetype');
 }
 
-$col1: #F4C2C2;
-$col2: #F4D4CB;
-$col6: #F7F7E1;
-$col5: #D1EDCC;
-$col4: #C4E6B8;
-$col3: #B3D9B2;
+// Colors
 
-$black: #181A18;
-$white: #FBFAF5;
+$color-primary: #5b945d;
+$color-white: #FBFAF5;
+$color-black: #1D1D1D;
 
+$color-primary-light-1: mix($color-white, $color-primary, 10%) !default; /* 53a8ff */
+$color-primary-light-2: mix($color-white, $color-primary, 20%) !default; /* 66b1ff */
+$color-primary-light-3: mix($color-white, $color-primary, 30%) !default; /* 79bbff */
+$color-primary-light-4: mix($color-white, $color-primary, 40%) !default; /* 8cc5ff */
+$color-primary-light-5: mix($color-white, $color-primary, 50%) !default; /* a0cfff */
+$color-primary-light-6: mix($color-white, $color-primary, 60%) !default; /* b3d8ff */
+$color-primary-light-7: mix($color-white, $color-primary, 70%) !default; /* c6e2ff */
+$color-primary-light-8: mix($color-white, $color-primary, 80%) !default; /* d9ecff */
 
+$color-primary-dark-1: mix($color-black, $color-primary, 10%) !default; /* 0f0f0f */
+$color-primary-dark-2: mix($color-black, $color-primary, 20%) !default; /* 0f0f0f */
+$color-primary-dark-3: mix($color-black, $color-primary, 30%) !default; /* 0f0f0f */
+$color-primary-dark-4: mix($color-black, $color-primary, 40%) !default; /* 0f0f0f */
+$color-primary-dark-5: mix($color-black, $color-primary, 50%) !default; /* 0f0f0f */
+$color-primary-dark-6: mix($color-black, $color-primary, 60%) !default; /* 0f0f0f */
+$color-primary-dark-7: mix($color-black, $color-primary, 70%) !default; /* 0f0f0f */
+$color-primary-dark-8: mix($color-black, $color-primary, 80%) !default; /* 0f0f0f */
+
+$color-success: #00BFA5;
+$color-warning: #FF9F1C;
+$color-danger: #FF5252;
+$color-info: #00BFA5;
 
 // Colours
-// http://colormind.io/bootstrap/
-$light-shade: #feffff;
-// Use this color as the background for your dark-on-light designs, or the text color of an inverted design. 
-$light-accent: #859583;
-// Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette. 
-$main-color: #5b945d;
-// This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. 
-$dark-accent: #6d7767;
-//  Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best. 
-$dark-shade: #181A18;
-// Use as the text color for dark-on-light designs, or as the background for inverted designs. 
-
-$background: $dark-shade;
-$paragraph: $white;
-
-$headline: #373f27;
+$background: $color-white;
+$paragraph: $color-black;
 
 // illustration
-$stroke: $headline;
+$stroke: $color-primary;
 $main: $background;
 
 //shadow
@@ -56,42 +59,40 @@ $shadow-darker: rgba(#000, .75);
 $shadow: rgba(#000, .5);
 $shadow-lighter: rgba(#000, .35);
 
-$inset-text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-
-// Text
+$inset-text-shadow: 2px 2px 3px $shadow;
 $text-shadow-dark: 0 1px 5px #000;
 
 //links
 $link-color: $paragraph;
-$link-hover-color: #fff;
+$link-hover-color: $color-primary;
 
 // button
-$button-border: $col3;
-$button-text: $light-shade;
-$button-background: $shadow-lighter;
-$button-background-hover: $col3;
-$button-color-hover: $black;
+$button-border: $color-primary;
+$button-text: $color-primary-dark-2;
+$button-background: $background;
+$button-background-hover: $color-primary;
+$button-color-hover: $background;
 
 // main
-$heading-color: $white;
+$heading-color: $color-white;
 
 //navigation
-$site-title-color: $white;
-$site-title-stroke: $white;
-$nav-border: $white;
+$site-title-color: $color-white;
+$site-title-stroke: $color-white;
+$nav-border: $color-white;
 $nav-link: #fff;
 $nav-link-background: $shadow-lighter;
 $nav-link-background-hover: $shadow;
 $nav-link-hover-color: lightgreen;
-$nav-link-hover-underline-color: $col3;
+$nav-link-hover-underline-color: $color-primary;
 $nav-font-weight: 900;
 $nav-menu-color: #fff;
 
 // Hero
-$hero-headline: $light-shade;
-$hero-secondary-headline: $col3;
+$hero-headline: $color-primary-light-4;
+$hero-secondary-headline: $color-primary;
 $hero-paragraph: #fff;
-$hero-gradient: linear-gradient(to bottom, transparent 0%, rgba($dark-shade, 1) 90%);
+$hero-gradient: linear-gradient(to bottom, transparent 0%, rgba($color-primary-dark-4, 1) 90%);
 
 $blur: 5px;
 $shadow-opacity: 0.3;
@@ -101,18 +102,18 @@ $glass-effect-border: rgba(#fff, .1);
 $glass-effect-shadow: rgba(#000, .5);
 
 // Blog Section
-$post-border: $col3;
+$post-border: $color-primary;
 
 
 // Posts
-$posts-background: $black;
-$tags-color: $col3;
-$post-title: $light-accent;
-$post-subtitle: $dark-shade;
-$post: $dark-shade;
+$posts-background: $color-black;
+$tags-color: $color-primary;
+$post-title: $color-primary-light-2;
+$post-subtitle: $color-primary-dark-4;
+$post: $color-primary-dark-4;
 
 //footer
-$footer-background: $dark-shade;
+$footer-background: $color-primary-dark-4;
 
 // Regular Selectors
 *, *:before, *:after {
@@ -149,7 +150,7 @@ body {
 
     & .sectionTitle {
       font-size: 3rem;
-      color: $col3;
+      color: $color-primary;
       letter-spacing: 2px;
       text-align: center;
       // text-transform: uppercase;
@@ -247,6 +248,15 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-around;
+
+  #theme-toggle {
+    background: none;
+    border: none;
+
+    & > svg {
+      filter: drop-shadow(3px 5px 2px $shadow);
+    }
+  }
 
   & nav {
     display: flex;
@@ -450,20 +460,20 @@ footer {
     padding: 5% 3%;
     margin: 1%;
     border-radius: 5px;
-    border: 1px solid $col3;
+    border: 1px solid $color-primary;
     cursor: pointer;
 
     &:hover {
-      background: radial-gradient($background 60%, transparent, $col3 );
+      background: radial-gradient($background 60%, transparent, $color-primary );
       border: none;
     }
   }
 
   & a {
-    color: $light-shade;
+    color: $color-primary-light-4;
   }
   & small {
-    color: $white;
+    color: $color-white;
     opacity: 0.6;
   }
 }
@@ -499,7 +509,7 @@ footer {
 
       &:not(:last-child)::after {
         content: ", ";
-        color: $dark-accent;
+        color: $color-primary-dark-2;
       }
     } 
   }
@@ -524,12 +534,12 @@ footer {
 
     & h3 {
       font-size: 1.8rem;
-      color: fade-out($color: $white, $amount: 0.25);
+      color: fade-out($color: $color-white, $amount: 0.25);
     }
 
     & .metadata-container {
         margin: 1rem 0 ;
-        color: fade-out($white,0.5);
+        color: fade-out($color-white,0.5);
         font-size: 1rem;
     }
   }
@@ -543,7 +553,7 @@ footer {
       }
 
     & p {
-      color: lighten($col3,10%);
+      color: lighten($color-primary,10%);
       font-size: 1.2rem;
       line-height: 1.8;
     }
@@ -556,7 +566,7 @@ footer {
       list-style: "🌱 ";
       list-style-position: inside;
       line-height: 1.8;
-      color: lighten($col3,10%);
+      color: lighten($color-primary,10%);
     }
 
     & .home-link {

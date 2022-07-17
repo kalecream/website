@@ -16,6 +16,22 @@
   src: local("HighSpirit"), url(/fonts/HighSpirited.ttf) format("truetype");
 }
 
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* 0f0f0f */
+/* 0f0f0f */
+/* 0f0f0f */
+/* 0f0f0f */
+/* 0f0f0f */
+/* 0f0f0f */
+/* 0f0f0f */
+/* 0f0f0f */
 *, *:before, *:after {
   list-style: none;
   text-decoration: none;
@@ -32,8 +48,8 @@ html, body {
 }
 
 body {
-  background-color: #181A18;
-  color: #FBFAF5;
+  background-color: #FBFAF5;
+  color: #1D1D1D;
   font-size: 1.1rem;
   font-family: 'Proxima Nova', sans-serif;
   line-height: 1.5;
@@ -54,7 +70,7 @@ body section {
 
 body section .sectionTitle {
   font-size: 3rem;
-  color: #B3D9B2;
+  color: #5b945d;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -90,37 +106,37 @@ h3 {
 }
 
 p {
-  color: #FBFAF5;
+  color: #1D1D1D;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 1rem;
 }
 
 a {
-  color: #FBFAF5;
+  color: #1D1D1D;
   font-weight: 500;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
+  color: #5b945d;
 }
 
 .button {
   margin: 3% 5%;
   width: 50%;
-  border: 1px solid #B3D9B2;
-  color: #feffff;
+  border: 1px solid #5b945d;
+  color: #4f7c50;
   padding: 3%;
   text-transform: capitalize;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: #FBFAF5;
   border-radius: 5px;
   text-align: center;
 }
 
 .button:hover {
-  background-color: #B3D9B2;
-  color: #181A18;
+  background-color: #5b945d;
+  color: #FBFAF5;
   letter-spacing: 3px;
 }
 
@@ -136,6 +152,16 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+header #theme-toggle {
+  background: none;
+  border: none;
+}
+
+header #theme-toggle > svg {
+  -webkit-filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.5));
 }
 
 header nav {
@@ -223,7 +249,7 @@ header nav ul li a::before, header nav ul li a::after {
   height: 2px;
   display: block;
   position: absolute;
-  background-color: #B3D9B2;
+  background-color: #5b945d;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 10;
@@ -247,7 +273,7 @@ footer {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #181A18;
+  background-color: #426443;
 }
 
 footer > * {
@@ -327,8 +353,8 @@ footer > * {
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, #181a18));
-  background: linear-gradient(to bottom, transparent 0%, #181a18 90%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, #426443));
+  background: linear-gradient(to bottom, transparent 0%, #426443 90%);
   background-size: cover;
   z-index: -1;
   display: -webkit-box;
@@ -351,7 +377,7 @@ footer > * {
 
 .hero .heroRight h1 {
   text-transform: uppercase;
-  color: #B3D9B2;
+  color: #5b945d;
   font-size: 4.5rem;
 }
 
@@ -386,17 +412,17 @@ footer > * {
   padding: 5% 3%;
   margin: 1%;
   border-radius: 5px;
-  border: 1px solid #B3D9B2;
+  border: 1px solid #5b945d;
   cursor: pointer;
 }
 
 .blogSection .blogDiv:hover {
-  background: radial-gradient(#181A18 60%, transparent, #B3D9B2);
+  background: radial-gradient(#FBFAF5 60%, transparent, #5b945d);
   border: none;
 }
 
 .blogSection a {
-  color: #feffff;
+  color: #9bbd9a;
 }
 
 .blogSection small {
@@ -417,7 +443,7 @@ footer > * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #181A18;
+  background-color: #1D1D1D;
 }
 
 .post-container img {
@@ -431,7 +457,7 @@ footer > * {
   padding-bottom: 0.2rem;
   text-transform: capitalise;
   font-size: 1rem;
-  color: #B3D9B2;
+  color: #5b945d;
   opacity: 0.6;
   font-weight: 900;
 }
@@ -442,7 +468,7 @@ footer > * {
 
 .post-container .tags-container a:not(:last-child)::after {
   content: ", ";
-  color: #6d7767;
+  color: #4f7c50;
 }
 
 .post-container .post-header {
@@ -466,7 +492,7 @@ footer > * {
 
 .post-container .post-header h1 {
   font-size: 6rem;
-  color: #859583;
+  color: #7ba87b;
 }
 
 .post-container .post-header h3 {
@@ -487,7 +513,7 @@ footer > * {
 }
 
 .post-container .post-content p {
-  color: #d5ead4;
+  color: #77ab79;
   font-size: 1.2rem;
   line-height: 1.8;
 }
@@ -500,7 +526,7 @@ footer > * {
   list-style: "🌱 ";
   list-style-position: inside;
   line-height: 1.8;
-  color: #d5ead4;
+  color: #77ab79;
 }
 
 .post-container .post-content .home-link {
@@ -563,7 +589,7 @@ footer > * {
     height: 100%;
     z-index: -1;
     opacity: 0;
-    background: #181A18;
+    background: #FBFAF5;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }

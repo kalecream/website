@@ -13,7 +13,7 @@ const META: MetaType = {
     title: "KaleCream | Webdev",
     lang: "en-us",
     description: "Jamaican Webdev",
-    image: "/logo.png",
+    image: "/logo.svg",
     url: "https://www.kalecream.com"
 }
 export { META }
